@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>
+            <span>我是span</span>
+        </p>
+        <ul>
+            <li>我是li标签</li>
+        </ul>
+        <h1>我是标题</h1>
+        <input type="text">
+        <a href=""></a>
+
+    </div>
+    <script>
+        // 1.获取标签的兄弟元素
+        // a)上一个兄弟元素:DoM标签对象.previousElementSibling
+        // b)下一个兄弟元素DoM标签对象.nextElementSibling
+
+        // 总结：
+        // a)得到的结果都是一个标签对象
+        let ul = document.querySelector('ul');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        let res = ul. previousElementSibling. previousElementSibling; //上一个兄弟元素
+        let res1 = ul. nextElementSibling. nextElementSibling; //下一个兄弟元素; //下一个兄弟元素
+        console.log(res1);
+    </script>
+</body>
+</html>
