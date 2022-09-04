@@ -23,7 +23,21 @@
                 <a href="">文字1</a>
             </li>
         </ul>
+        <p>jasoid</p>
+        <input type="text">
     </div>
-    
+    <script>
+        // 1.根据父元素获取子元素
+            // 语法：父DOM标签对象.children
+        // 总结：
+            // a)得到的结果是一个伪数组
+            // b)得到的结果是直接子元素，不包含其他后代元素
+
+        let div = document.querySelector('div');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        let res = div.children
+        for (let i = 0; i < res.length; i++) {
+            console.log(res[i]);
+        }
+    </script>
 </body>
 </html>
