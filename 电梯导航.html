@@ -98,10 +98,10 @@
                 //根据索引找到盒子
                 let box =  document.querySelector(`.neirong:nth-child(${i+1})`);//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
                     //获取当前盒子距离盒子顶部的位置
-                    let lg = box.offsetTop;
-                    console.log(lg);
+                    // let lg = box.offsetTop;
+                    // console.log(lg);
                     //给滚动条设置滚动距离
-                    document.documentElement.scrollTop  = lg;
+                    document.documentElement.scrollTop  = box.offsetTop;
 
                 })//绑定事件
         }
