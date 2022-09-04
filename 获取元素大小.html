@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 实际宽度226=内容区域宽度+左右内边距+左右外边框 */
+
+        div{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 1.通过js获取元素大小
+            // 语法1:标签对象.offsetWidtn |  标签对象.offsetHeight (实际大小)
+            // 语法2:标签对象.clientWidth |  标签对象.clientHeight (内容区域+ 内边距不包含外边框)
+        let div = document.querySelector('div');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        console.dir(div);
+    </script>
+</body>
+</html>
