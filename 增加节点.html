@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.增加节点（增加元素）
+        //a)创建一个新的标签 document.createElement('标签名')
+        // b)将创建的标签添加到父元素中： 父元素.appendChild(新创建的标签)
+        
+        // 总结
+        //document.createElement()得到的结果是一个DOM标签对象
+        // 代码演示
+        let res = document.createElement('h1')
+        res.innerHTML = '我是一个标题';
+        //先获取body标签
+        let body = document.querySelector('body');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        //向父元素body中添加一个新标签
+        body.appendChild(res)
+
+    </script>
+</body>
+</html>
