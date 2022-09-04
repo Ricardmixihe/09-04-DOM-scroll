@@ -82,7 +82,29 @@
             // 功能1：点击左侧导航，给对应的标签设置样式
             // 功能2：点击左侧导航，找到对应的右侧的盒子，设置滚动条的位置
                 // a）设置滚动条的位置？能不能随便给滚动条设置一个值（不能随便写一个值）
+                // b)设置滚动条的位置三右侧盒子举例页面顶部的位置距离
 
+        // 代码实现
+        let nav_title = document.querySelectorAll('.item');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        for (let i = 0; i < nav_title.length; i++) {
+            //点击每一个标题
+            nav_title[i].addEventListener('click',function () {
+                // 利用排他思想，让左侧导航栏背景颜色消失转移
+                document.querySelector('.active').classList.remove('active');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+                this.classList.add('active')
+
+
+                
+                //根据索引找到盒子
+                let box =  document.querySelector(`.neirong:nth-child(${i+1})`);//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+                    //获取当前盒子距离盒子顶部的位置
+                    let lg = box.offsetTop;
+                    console.log(lg);
+                    //给滚动条设置滚动距离
+                    document.documentElement.scrollTop  = lg;
+
+                })//绑定事件
+        }
     </script>
 </body>
 
