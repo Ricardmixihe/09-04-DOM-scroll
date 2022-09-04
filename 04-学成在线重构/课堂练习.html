@@ -70,7 +70,22 @@
                 num: 590
             },
         ]
-       
+
+        // 代码实现 :
+        let ul = document.querySelector('.box-bd ul');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        for (let i = 0; i < data.length; i++) {
+            let li = document.createElement('li');
+            li.innerHTML = `
+                    <a herf='#'> 
+                        <img src="${data[i].src}">  
+                        <h4>${data[i].title}</h4>
+                        <span>高级</span> ▪️
+                        <span>${data[i].num}</span> 人在学习 
+                    </a>`;
+
+            ul.appendChild(li);
+        }
+
     </script>
 </body>
 
