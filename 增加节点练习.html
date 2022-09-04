@@ -17,15 +17,16 @@
 
         //1.
         let body = document.querySelector('body');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
-        // let ipt = document.querySelector('input');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
-        // ipt. addEventListener('click',function () {
-        //     let div = document.createElement('div');
-        //     div.style.width = '200px'
-        //     div.style.height = '200px'
-        //     div.style.backgroundColor = 'red'
-        //     body. appendChild(div);
+        let ipt = document.querySelector('input');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        ipt. addEventListener('click',function () {
+            let div = document.createElement('div');
+            div.style.width = '200px'
+            div.style.height = '200px'
+            div.style.backgroundColor = 'red'
+            div.style.margin = '20px'
+            body. appendChild(div);
 
-        // })//绑定事件
+        })//绑定事件
         //2.
         let ary = ['老段','张三','李四']
         let ul = document.createElement('ul');
