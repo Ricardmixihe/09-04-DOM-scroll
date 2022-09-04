@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>
+            <span>我是span</span>
+        </p>
+        <ul>
+            <li>我是li标签</li>
+        </ul>
+        <h1>我是标题</h1>
+    </div>
+    <script>
+        //1.根据子元素获取父元素 
+        // 语法：子DOM标签对象.parentNode 
+
+        // 总结
+        // a)子DOM标签对象.parentNode只能获取当前标签的直接父元素
+        // b)子DOM标签对象.parentNode得到的结果就是二个标签对象
+
+        // 代码演示：
+        let span = document.querySelector('span');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+            let res = span.parentNode
+            console.log(res);
+        console.log(res.parentNode);
+    </script>
+</body>
+</html>
