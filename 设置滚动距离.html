@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        .btn{
+            width: 80px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: purple;
+            color: aliceblue;
+            text-align: center;
+            display: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">返回顶部
+
+    </div>
+    <script>
+        //设置滚动距离
+        // document.documentElement.scrollTop
+        // window.scrollTo(x值,y值)
+
+        let btn = document.querySelector('.btn');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        window. addEventListener('scroll',function () {
+            if (document.documentElement.scrollTop >= 400) {
+                btn.style.display = 'block'
+            }else{
+                btn.style.display = 'none'
+
+            }
+        })//绑定事件
+
+        btn. addEventListener('click',function () {
+            window.scrollTo(0,0)
+        })//绑定事件
+    </script>
+</body>
+</html>
