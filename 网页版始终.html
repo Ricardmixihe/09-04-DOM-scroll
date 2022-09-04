@@ -13,9 +13,18 @@
         function myTime() {
             let dt = new Date()
             let year = dt.getFullYear()
-            let M = dt.getMonth()+1
-            let day = dt.getDate()
+            let M = dt.getMonth()+1;
+            if (M<10) {
+                M = '0' + M
+            }
+            let day = dt.getDate();
+            if (day<10) {
+                day = '0' + day
+            }
             let h = dt.getHours();
+            if (h<10) {
+                h = '0' + h
+            }
             let m = dt.getMinutes();
             if (m<10) {
                 m = '0' + m
