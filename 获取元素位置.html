@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-left: 200px;
+        }
+        .one{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="one"></div>
+    </div>
+    <script>
+        // 通过js获取标签的位置
+        // 语法：标签对象.offsetLeft | 标签对象.offsetTop
+        // 总结:
+            // 1,标签对象.offsetLeft标签对象 | .offsetTop获取标签的位置参照页面左上角（可视区域）
+            // 2.如果望元素位置参照父元素，则需要给父元素设置定位
+
+        let one = document.querySelector('.one');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        console.log(one.offsetLeft);
+    </script>
+</body>
+</html>
