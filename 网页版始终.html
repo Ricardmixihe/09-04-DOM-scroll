@@ -17,7 +17,13 @@
             let day = dt.getDate()
             let h = dt.getHours();
             let m = dt.getMinutes();
+            if (m<10) {
+                m = '0' + m
+            }
             let s = dt.getSeconds()
+            if (s<10) {
+                s = '0' + s
+            }
             let timeStr = `今天是 ${year} 年 ${M}月 ${day}号 ${h} : ${m} : ${s}`
             div.innerHTML = timeStr
         }
