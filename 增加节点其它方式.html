@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>一段文字</p>
+
+    </div>
+    <input type="button">
+    <script>
+    //1.克隆节点（了解） 
+    // 克隆：本质上通过s的方式进行复制 
+        // 语法：DoM标签对象.cloneNode(布尔值)
+    //总结：1.false===>只克隆标签自己本身，不包含标签中的内容
+        // 2.true ===>既要克隆标签本身，还包括了标签中的内容
+        let div = document.querySelector('div');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        let res = div.cloneNode(true)
+            console.log(res);
+
+
+    //2,插入节点（了解）
+    //本质上也是在父元素中追加一个节点，该方式可以在任何位置处增加节点，
+</script>
+</body>
+</html>
